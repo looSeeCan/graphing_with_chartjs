@@ -1,6 +1,6 @@
 
 
-const Graph = (xLabels) => {
+const Graph = (xLabels, dataForGraph) => {
     // const div = document.createElement("div");
     // div.id = "graph"
     // const a = document.getElementById("graph");
@@ -15,7 +15,8 @@ const Graph = (xLabels) => {
     // console.log(canvas);
     // div.appendChild(canvas);
         // console.log(yearArr, tempArr);
-        console.log(xLabels);
+        console.log(xLabels, dataForGraph);
+
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'bar',
@@ -24,7 +25,8 @@ const Graph = (xLabels) => {
                 labels: xLabels,
                 datasets: [{
                     label: "Global Average Temperature",
-                    data: [12, 19, 3, 5, 2, 3],
+                    // data: [12, 19, 3, 5, 2, 3],
+                    data: dataForGraph,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         // 'rgba(54, 162, 235, 0.2)',
