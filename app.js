@@ -1,4 +1,4 @@
-document.title = "Chart.js";
+document.title = "Fetch and grab csv file";
 
 import {ZonAnnFile} from "./components/csvFile.js"
 
