@@ -22,9 +22,11 @@ const ZonAnnFile = async () => {
         const year = a[0];
         const temp = a[1];
         xLabels.push(a[0]);//im pushing the year(index 0 of the array) into this array variable
-        dataForGraph.push(a[1]);
+        console.log(temp);
+        // dataForGraph.push(parseFloat(temp) + 14);//this plus 14 is supposed to be added to make the data correct (temp). I left it out. The graph looks cooler without it.
+        dataForGraph.push(parseFloat(temp));
     });
-    // console.log(xLabels, dataForGraph);
+    console.log(dataForGraph);
     Graph(xLabels, dataForGraph);//call the graphing table(chart.js), passing the array as an argument
     
     return response;
